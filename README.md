@@ -1,7 +1,7 @@
 # Koa Starter Kit
 For Babel Sarter-Kit, please see [Babel/Node Server Example](https://github.com/babel/example-node-server).
 
-Koa Starter Kit is a basic setup template for the quick starting with Koa2. It was written in ES6 with a little messily primitive Javascript syntax that helps you get started easier than ever in building NodeJS API.
+Koa Starter Kit (KSK) is a basic setup template for the quick starting with Koa2. It was written in ES6 with a little messily primitive Javascript syntax that helps you get started easier than ever building NodeJS API.
 
 KSK includes some lovely common setup:
 
@@ -37,19 +37,19 @@ npm start
 ```
 
 ### Dev's shortcuts
-There are npm configurations which provides some commands to do things quickly.
+There are npm commands for dev's stuff.
 
 - Run the server during the development
 ```shell
 npm start
 ```
 
-- Build and transpile code into ES2015 for production
+- Build and transpile code into Javascript for production
 ```shell
 npm run build
 ```
 
-- Run server as production (after building product)
+- Run server as production (run the Js transpiled code)
 ```shell
 npm run serve
 ```
