@@ -65,7 +65,6 @@ npm run test
 ### The REST Api
 KSK has three api endpoints for demonstration purpose.
 
-**NOTICE**
 You need to setup domains white list before you can use any api endpoints with React, Angular or Vuejs application.
 You'll find the white list at: `src/config/index.js` (someone please help me turn the config file into multi enviroments config!)
 
