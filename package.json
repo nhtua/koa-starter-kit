@@ -26,6 +26,10 @@
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-compose": "^4.0.0",
-    "koa-router": "^7.2.1"
+    "koa-router": "^7.2.1",
+    "kcors": "^2.2.1",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^7.4.1",
+    "bcrypt": "^1.0.2"
   }
 }

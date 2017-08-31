@@ -10,8 +10,9 @@ KSK includes some lovely common setup:
 - [x] Build production with Babel
 - [x] Routing
 - [x] Middlewares using
-- [ ] Authentication with JSON Web Token 
+- [x] Authentication with JSON Web Token 
 - [ ] Authorization with built-in solution
+- [x] CORS accepts request from white list domain
 
 ### Requirement
 KSK requires Node >= 7.6 or higher.
@@ -57,4 +58,102 @@ npm run serve
 - Do the UnitTest
 ```shell
 npm run test
+```
+
+### The REST Api
+KSK has three api endpoints for demonstration purpose.
+
+#### /auth
+Login to get the jwt token.
+
+- request config:
+  + Method: POST
+  + Header: 
+  ```plain-text
+  Content-Type : application/json
+  ```
+
+- input: JSON as Raw body
+  ```json
+  {
+    "username": "john_doe",
+    "password": "123456"
+  }
+  ```
+
+- output:
+```json
+{
+    "error": false,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJqb2huX2RvZSIsInN0YXR1cyI6MSwidXBkYXRlZF9hdCI6IjIwMTctMDgtMzEgMDA6MDA6MDAiLCJpYXQiOjE1MDQyMDA2Mzd9.lVRnRCNB7-5zeq_DKtw0jzn_reTCKK5sYC3csIo-Je4",
+    "user": {
+        "id": 1,
+        "username": "john_doe",
+        "password": "$2a$10$TjZ4eIUYrxpF1IZ2zzU8Sel5BH6jFmdZey0L.Bmftw5apgd44hiHu",
+        "email": "john.doe@email.com",
+        "permission": 7,
+        "status": 1,
+        "updated_at": "2017-08-31 00:00:00",
+        "created_at": "2017-08-31 00:00:00"
+    },
+    "message": "Logged in successfully!"
+}
+```
+
+#### /user
+Get user list
+
+- request config:
+  + Method: GET
+  + Header: 
+  ```plain-text
+  Content-Type : application/json
+  Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJqb2huX2RvZSIsInN0YXR1cyI6MSwidXBkYXRlZF9hdCI6IjIwMTctMDgtMzEgMDA6MDA6MDAiLCJpYXQiOjE1MDQyMDA2Mzd9.lVRnRCNB7-5zeq_DKtw0jzn_reTCKK5sYC3csIo-Je4
+  ```
+
+- input: NONE
+
+- output:
+```json
+[
+    {
+        "id": 80978,
+        "username": "neal_carter",
+        "email": "Zaria.Batz49@gmail.com",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vytautas_a/128.jpg",
+        "updated_at": "2017-04-04T07:00:50.812Z"
+    },
+    {
+        "id": 68624,
+        "username": "meta_pollich",
+        "email": "Rylee.Casper67@yahoo.com",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bereto/128.jpg",
+        "updated_at": "2016-11-02T15:54:55.781Z"
+    },
+    ...
+]
+```
+
+#### /user/:id
+Get specific user info (/user/2 ~ get user info who has id = 2)
+
+- request config:
+  + Method: GET
+  + Header: 
+  ```plain-text
+  Content-Type : application/json
+  Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJqb2huX2RvZSIsInN0YXR1cyI6MSwidXBkYXRlZF9hdCI6IjIwMTctMDgtMzEgMDA6MDA6MDAiLCJpYXQiOjE1MDQyMDA2Mzd9.lVRnRCNB7-5zeq_DKtw0jzn_reTCKK5sYC3csIo-Je4
+  ```
+
+- input: NONE
+
+- output:
+```json
+{
+    "id": "2",
+    "username": "davon_corwin",
+    "email": "Maurine.Koepp79@yahoo.com",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/areandacom/128.jpg",
+    "updated_at": "2016-11-24T13:29:42.484Z"
+}
 ```
