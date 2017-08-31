@@ -12,7 +12,9 @@ KSK includes some lovely common setup:
 - [x] Middlewares using
 - [x] Authentication with JSON Web Token 
 - [ ] Authorization with built-in solution
-- [x] CORS accepts request from white list domain
+- [x] CORS accepts request from domain white list
+
+want more? Folk and submit your regular tasks.
 
 ### Requirement
 KSK requires Node >= 7.6 or higher.
