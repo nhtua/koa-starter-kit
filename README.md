@@ -5,13 +5,13 @@ Koa Starter Kit is a basic setup template for the quick starting with Koa2. It w
 
 KSK includes some lovely common setup:
 
-[x] `src` structure based-on Javascript modules
-[x] Auto reload in the dev time
-[x] Build production with Babel
-[x] Routing
-[x] Middlewares using
-[ ] Authentication with JSON Web Token 
-[ ] Authorization with built-in solution
+- [x] `src` structure based-on Javascript modules
+- [x] Auto reload in the dev time
+- [x] Build production with Babel
+- [x] Routing
+- [x] Middlewares using
+- [ ] Authentication with JSON Web Token 
+- [ ] Authorization with built-in solution
 
 ### Requirement
 KSK requires Node >= 7.6 or higher.
