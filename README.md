@@ -5,10 +5,10 @@ Koa Starter Kit (KSK) is a basic setup template for the quick starting with Koa2
 KSK includes some lovely common setup:
 
 - [x] `src` structure based-on Javascript modules
-- [x] Auto reload in the dev time
+- [x] Watching file changes then reload the server
 - [x] Build production with Babel
-- [x] Routing
-- [x] Middlewares using
+- [x] Routing, multi routers
+- [x] Middlewares
 - [x] Authentication with JSON Web Token 
 - [ ] Authorization with built-in solution
 - [x] CORS accepts request from domain white list
