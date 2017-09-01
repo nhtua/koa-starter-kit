@@ -1,6 +1,6 @@
 # Koa Starter Kit
 
-Koa Starter Kit (KSK) is a basic setup template for the quick starting with Koa2. It was written in ES6 with a little messily primitive Javascript syntax that helps you get started building NodeJS API easier than ever.
+Koa Starter Kit (KSK) is a basic boilerplate for the quick starting with Koa2. It was written in ES6 with a little messily primitive Javascript syntax that helps you get started building NodeJS API easier than ever.
 
 KSK includes some lovely common setup:
 
