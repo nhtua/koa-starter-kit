@@ -32,6 +32,7 @@ router.post('/login', async (ctx, next) =>{
     // Then we can automatically force user logout when their account was changed (block, change password, etc)
     const superSecret = CONFIG.JWT.secret + user.status + user.updated_at;
     const token = jwt.sign(payload, superSecret);
+    delete user.password;
     ctx.body = {
       error: false,
       token: token,
