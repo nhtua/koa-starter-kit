@@ -1,3 +1,5 @@
 node_modules/
 dist/
 .tern-project
+yarn.lock
+package-lock.json
