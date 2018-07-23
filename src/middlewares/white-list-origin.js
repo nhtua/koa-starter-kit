@@ -3,6 +3,9 @@ import cors from 'kcors';
 
 function checkOriginAgainstWhitelist(ctx) {
    const requestOrigin = ctx.accept.headers.origin;
+   if(CONFIG.WHITELIST.includes('*')){
+     return '*';
+   }
    if (!CONFIG.WHITELIST.includes(requestOrigin)) {
       if (requestOrigin.search(/(http|https)/) === 0) {
         return ctx.throw(`${requestOrigin} is not a valid origin`);

@@ -6,7 +6,7 @@ const CONFIG = {
   JWT: {
     secret: 'RUj2J]FcebI`:^SOzv&#x.J<gtZx(-\k'
   },
-  WHITELIST:  ['http://localhost:4200'],
+  WHITELIST:  ['*'],
   DIR: {}
 };
 
