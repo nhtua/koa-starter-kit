@@ -9,14 +9,14 @@ KSK includes some lovely common setup:
 - [x] Build production with Babel
 - [x] Routing, multi routers
 - [x] Middlewares
+- [x] CORS accepts request from domain white list
 - [x] Authentication with JSON Web Token 
 - [ ] Authorization with built-in solution
-- [x] CORS accepts request from domain white list
 
 want more? Folk and submit your regular tasks.
 
 ### Requirement
-KSK requires Node >= 7.6 or higher.
+KSK requires Node >= 8.6 or higher.
 
 ### Getting Started
 First we'll clone source code from [GitHub Repo](https://github.com/nhtua/koa-starter-kit.git)
@@ -30,6 +30,11 @@ Then we need to install the dependencies
 ```shell
 cd koa-starter-kit
 npm install
+```
+
+Next, make your own environmental config file:
+```shell
+cp src/config/development.example.json src/config/development.json
 ```
 
 Finally, run the serve
