@@ -21,7 +21,7 @@
     "nodemon": "^1.10.0"
   },
   "dependencies": {
-    "bcrypt": "^1.0.2",
+    "bcrypt": "^3.0.8",
     "date-fns": "^1.28.5",
     "faker": "^4.1.0",
     "jsonwebtoken": "^7.4.1",
